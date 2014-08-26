@@ -147,7 +147,7 @@ OpenSpending.DailyBread = function (elem) {
                 "  </div>" +
                 "<% }); %>" +
                 "</div>" +
-                "<div class='db-area-row'>" +
+                "<div class='db-area-row db-area-symbols'>" +
                 "<% _.each(areas, function(area, idx) { %>" +
                 "  <div class='db-area-col' style='width: <%= width %>%;' data-db-area='<%= idx %>'>" +
                 "    <div class='db-area-icon' data-svg-url='<%= icons[idx] %>'></div>" +
@@ -194,7 +194,7 @@ OpenSpending.DailyBread = function (elem) {
       var iconUrl, paper;
       iconUrl = $(e).data('svg-url');
       paper = Raphael(e, iconRad+iconRad,iconRad+iconRad+5);
-      paper.circle(iconRad,iconRad,iconRad).attr({ fill: '#830242', stroke: 'none' });
+      paper.circle(iconRad,iconRad,iconRad).attr({ fill: '#20749A', stroke: 'none' });
       paper.circle(iconRad,iconRad,iconRad-2).attr({ fill: 'none', stroke: '#eee', opacity: .8, 'stroke-dasharray': '- ' });
       $.get(iconUrl, function(svg) {
         if (typeof(svg) == "string") {
@@ -233,7 +233,7 @@ OpenSpending.renderDependentTypes = function(db) {
     $(target).bind('click', handleClick);
 
     var r = Raphael(target, iconRad * 2, iconRad * 2 + 5);
-    r.circle(iconRad,iconRad,iconRad).attr({ fill: '#830242', stroke: 'none' });
+    r.circle(iconRad,iconRad,iconRad).attr({ fill: '#20749A', stroke: 'none' });
     r.circle(iconRad,iconRad,iconRad-2).attr({ fill: 'none', stroke: '#eee', opacity: .8, 'stroke-dasharray': '- ' });
     $.get(iconPath, function(svg) {
       if (typeof(svg) == "string") {

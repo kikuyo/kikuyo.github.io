@@ -2142,26 +2142,15 @@ button.btn.small, input[type="submit"].btn.small {
   margin-right: 2px;
   line-height: 14px;
 }
-.nav-tabs {
-  border-bottom: 1px solid #ddd;
-}
 .nav-tabs > li {
   margin-bottom: -1px;
 }
 .nav-tabs > li > a {
   padding-top: 9px;
   padding-bottom: 9px;
-  border: 1px solid transparent;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
-}
-.nav-tabs > li > a:hover {
-  border-color: #eeeeee #eeeeee #dddddd;
 }
 .nav-tabs > .active > a, .nav-tabs > .active > a:hover {
   color: #555555;
-  background-color: #ffffff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
   cursor: default;
@@ -2171,13 +2160,9 @@ button.btn.small, input[type="submit"].btn.small {
   padding-bottom: 8px;
   margin-top: 2px;
   margin-bottom: 2px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
 }
 .nav-pills .active > a, .nav-pills .active > a:hover {
-  color: #ffffff;
-  background-color: #0088cc;
+  color: #20749A;
 }
 .nav-stacked > li {
   float: none;

@@ -30,9 +30,10 @@ body, p, blockquote p {
   /*
   font-family: Palatino, georgia, 'times new roman', serif;
   */
-  font-family: 'times new roman', serif;
+  font-family: Helvetica, Arial,"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", sans-serif;
   font-size: 16px;
   line-height: 25px;
+  color: #1C5874;
 }
 
 blockquote p {
@@ -41,9 +42,11 @@ blockquote p {
 }
 
 a {
-  color: #830242;
+  color: #20749A;
 }
-
+strong {
+  color: #20749A;
+}
 .chromeframe {
   margin-top: 10px;
   padding: 10px;
@@ -55,18 +58,23 @@ a {
   margin-top: 3em;
   margin-bottom: 0em;
 }
-
+header {
+  background: #20749A;
+  /*background: #A44C00;*/
+  margin-bottom: 40px;
+}
 #logo {
-  padding-top: 1em;
-  padding-bottom: 0em;
+  padding-top: 2em;
+  padding-bottom: 0.2em;
 }
 
 #logo #claim {
-  margin-top: -10px;
-  font-style: italic;
-  /*letter-spacing: 1px;*/
-  color: #999999;
-  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #FFF;
+  font-size: 1.5em;
+  line-height: 2.6em;
+  letter-spacing: 2px;
 }
 
 #logo a:hover {
@@ -76,44 +84,87 @@ a {
 .main-header {
   text-align: center;
 }
+.container{
+  text-align: center;
+}
 
-/* 
- * Nav and Footer styles based on OKFN brand design. 
+.single-or-family{
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.page-header{
+  font-weight: bold;
+  background: #FFF;
+  padding-bottom: 0;
+  color: #20749A;
+  line-height: 2.4em;
+  border: 4px solid #20749A;
+}
+
+.centered-block{
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  text-align: center;
+}
+/*
+ * Nav and Footer styles based on OKFN brand design.
  */
 
-nav ul li, 
+nav ul li,
 footer,
 footer p {
   font-family: "OpenSansLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 1.9em;
+  text-align: left;
+  color: #FFFFFF;
+}
+nav ul.nav.nav-tabs {
+  display: inline-block;
+  margin-bottom: 0;
 }
 
 nav ul.nav.nav-tabs li {
-  float: right;
+  display: inline-block;
+}
+.nav-tabs > li > a{
+  color: #FFF;
+}
+.nav-tabs > li > a:hover{
+  color: #20749A;
+}
+.nav-tabs > li > a.active{
+  color: #FFF;
 }
 
 nav ul.nav.nav-tabs li a.active {
-  color: #000;
+  color: #20749A;
   font-weight: bold;
   font-family: OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #FFF;
 }
 
 footer {
-  background: #222222 url('../img/okfn-watermark.png') top right no-repeat;
-  margin-top: 50px;
+  background: #282828 url('../img/okfn-watermark.png') top right no-repeat;
+  margin-top: 60px;
   padding: 0;
 }
 
 footer > .inner {
   background: url('../img/footer-bevel.png') top repeat-x;
-  padding: 10px 0 30px 0;
+  padding: 30px 0 30px 0;
   color: #fff;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2);
+  line-height: 2.1em;
   min-height: 190px;
 }
 
 footer ul.footer-links {
+  text-align: left;
 }
 
 footer a, footer a:hover {
@@ -121,8 +172,8 @@ footer a, footer a:hover {
 }
 
 
-/* 
- * Visualization-specific styles. 
+/*
+ * Visualization-specific styles.
  */
 
 #dailybread {
@@ -206,4 +257,97 @@ footer a, footer a:hover {
 #bubbletree .amount {
   font-family: Palatino, georgia, 'times new roman', serif;
   font-size: 14px;
+}
+
+@media all and (max-width: 340px) {
+  body{
+    min-width: 100%;
+  }
+  .container{
+    width: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  #db-topbar{
+    overflow: hidden !important;
+    height: auto !important;
+  }
+  .layout-col{
+    width: 100% !important;
+    text-align: center !important;
+  }
+  .db-area-col{
+    width: 32.9% !important;
+    margin-bottom: 10px;
+  }
+  .db-area-row{
+    position: relative;
+  }
+  .db-tier{
+    position: relative;
+
+  }
+  .db-area-row.db-area-symbols{
+    position: absolute;
+    top: 0;
+  }
+  .db-area-row.db-area-symbols .db-area-col{
+    margin-top: 15px;
+    height: 130px;
+  }
+  .db-area-col[data-db-area="9"],
+  .db-area-col[data-db-area="10"],
+  .db-area-col[data-db-area="11"]{
+    margin-top: 0 !important;
+  }
+  .db-area-col.db-area-title[data-db-area="9"],
+  .db-area-col.db-area-title[data-db-area="10"],
+  .db-area-col.db-area-title[data-db-area="11"]{
+    margin-top: 10px !important;
+  }
+  .db-tier[data-db-tier="1"] .db-area-row .db-area-col{
+    width: 100% !important;
+  }
+  .db-area-title{
+    height: 136px;
+  }
+  #bubbletree{
+    max-width: 100%;
+    height: 300px;
+  }
+  .row .bubbletree-wrapper{
+    height: auto;
+  }
+  [class*="span"]{
+    max-width: 94.4% !important;
+  }
+  .page-header{
+    font-size: 14px;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+  }
+  .span10.centered-block,
+  p{
+    font-size: 13px;
+  }
+  iframe{
+    max-width: 94.4%;
+  }
+  .nav.nav-tabs li{
+    width: 48.9% !important;
+    text-align: center;
+    font-size: 12px;
+  }
+  #claim{
+    font-size: 16px !important;
+  }
+  #db-salary{
+    margin-bottom: 1em;
+  }
+  #db-slider{
+    margin-bottom: 1em;
+  }
+  #db-tax{
+    margin-bottom: 1em;
+  }
 }
